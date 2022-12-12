@@ -1121,11 +1121,11 @@ void ATHLETE_CHANGE_FUN() {
 
 		}
 
-		char new_name[1024];
+		char new_name[MAX_NAME_LENGTH];
 		flag = 0;
 		size_t size = 0;
 
-		flag = scanf("%s", new_name);
+		flag = scanf_s("%s", new_name, MAX_NAME_LENGTH);
 		size = strlen(new_name);
 		scanf("%*[^\n]"); scanf("%*c");
 
@@ -1134,7 +1134,7 @@ void ATHLETE_CHANGE_FUN() {
 			color(4);
 			printf("请输入正确的格式，例如：小王\n");
 			color(7);
-			flag = scanf("%s", new_name);
+			flag = scanf_s("%s", new_name, MAX_NAME_LENGTH);
 			size = strlen(new_name);
 			scanf("%*[^\n]"); scanf("%*c");
 
